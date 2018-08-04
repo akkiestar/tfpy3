@@ -1,9 +1,11 @@
 FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends python3-pip python3-dev python3-setuptools
 
 RUN pip3 install --upgrade  pip
 
+# for opencv
 RUN apt-get -y install build-essential \
 pkg-config \
 libjpeg-dev \
@@ -36,13 +38,17 @@ scipy \
 jupyterlab \
 pandas \
 scikit-image \
-opencv-python
+opencv-python \
+scikit-learn  \
+keras \
+pydot
 
 RUN apt-get -y install vim \
 tmux \
 libsm6 \
 libxext6 \
-libxrender-dev
+libxrender-dev \
+graphviz
 
 EXPOSE 8888
 EXPOSE 6006
