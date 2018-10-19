@@ -1,7 +1,6 @@
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM tensorflow/tensorflow:1.12.0-rc1-devel-gpu-py3
 
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends python3-pip python3-dev python3-setuptools
 
 RUN pip3 install --upgrade  pip
 
@@ -33,7 +32,7 @@ libtbb2 \
 libtbb-dev \
 libeigen3-dev
 
-RUN pip3 install --upgrade tensorflow-gpu \
+RUN pip3 install --upgrade \
 scipy \
 jupyterlab \
 pandas \
@@ -52,6 +51,3 @@ graphviz
 
 EXPOSE 8888
 EXPOSE 6006
-
-
-CMD [ '/bin/bash'  ]
