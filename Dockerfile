@@ -40,7 +40,10 @@ scikit-image \
 opencv-python \
 scikit-learn  \
 keras \
-pydot
+pydot \
+joblib \
+matplotlib \
+seaborn
 
 RUN apt-get -y install vim \
 tmux \
