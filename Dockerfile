@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.0.0a0-gpu-py3
+FROM ubuntu:16.04
 
 RUN apt-get update
 
@@ -43,7 +43,8 @@ keras \
 pydot \
 joblib \
 matplotlib \
-seaborn
+seaborn \
+tensorflow-gpu
 
 RUN apt-get -y install vim \
 tmux \
