@@ -3,32 +3,9 @@ FROM tensorflow/tensorflow:latest-devel-gpu-py3
 RUN pip3 install --upgrade  pip
 
 # for opencv
-RUN apt-get -y install build-essential \
-pkg-config \
-libjpeg-dev \
-libpng-dev \
-libtiff5-dev \
-libopenexr-dev \
-libavcodec-dev \
-libavformat-dev \
-yasm \
-libfaac-dev \
-libopencore-amrnb-dev \
-libopencore-amrwb-dev \
-libtheora-dev \
-libvorbis-dev \
-libxvidcore-dev \
-libx264-dev \
-libswscale-dev \
-libjasper-dev \
-libdc1394-22-dev \
-libv4l-dev \
-libgstreamer1.0-dev \
-libgstreamer-plugins-base0.10-dev \
-libgstreamer-plugins-base1.0-dev \
-libtbb2 \
-libtbb-dev \
-libeigen3-dev \
+RUN apt-get update && apt-get -y libopencv-dev 
+
+RUN pip3 install --upgrade \
 scipy \
 jupyterlab \
 pandas \
@@ -39,8 +16,8 @@ keras \
 pydot \
 joblib \
 matplotlib \
-seaborn \
-tensorflow-gpu
+seaborn
+
 
 RUN apt-get -y install vim \
 tmux \
