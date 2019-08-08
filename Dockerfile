@@ -1,6 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
-
-RUN apt-get update
+FROM tensorflow/tensorflow:latest-devel-gpu-py3
 
 RUN pip3 install --upgrade  pip
 
@@ -31,8 +29,6 @@ libgstreamer-plugins-base1.0-dev \
 libtbb2 \
 libtbb-dev \
 libeigen3-dev
-RUN apt-get install -y --no-install-recommends python3-pip python3-dev python3-setuptools
-RUN pip3 install --upgrade \
 scipy \
 jupyterlab \
 pandas \
