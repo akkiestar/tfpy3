@@ -28,7 +28,7 @@ libgstreamer-plugins-base0.10-dev \
 libgstreamer-plugins-base1.0-dev \
 libtbb2 \
 libtbb-dev \
-libeigen3-dev
+libeigen3-dev \
 scipy \
 jupyterlab \
 pandas \
