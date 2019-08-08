@@ -3,7 +3,12 @@ FROM tensorflow/tensorflow:latest-devel-gpu-py3
 RUN pip3 install --upgrade  pip
 
 # for opencv
-RUN apt-get update && apt-get -y libopencv-dev 
+RUN apt-get update && \
+apt-get install -y \
+libglib2.0-0 \
+libsm6 \
+libxrender1 \
+libxext6
 
 RUN pip3 install --upgrade \
 scipy \
