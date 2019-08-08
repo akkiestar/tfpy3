@@ -1,5 +1,6 @@
-FROM tensorflow/tensorflow:latest-devel-gpu-py3
-
+FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends python3-pip python3-dev python3-setuptools
 RUN pip3 install --upgrade  pip
 
 # for opencv
@@ -21,7 +22,8 @@ keras \
 pydot \
 joblib \
 matplotlib \
-seaborn
+seaborn \
+tensorflow-gpu
 
 
 RUN apt-get -y install vim \
