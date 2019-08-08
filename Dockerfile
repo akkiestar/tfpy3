@@ -31,7 +31,7 @@ libgstreamer-plugins-base1.0-dev \
 libtbb2 \
 libtbb-dev \
 libeigen3-dev
-
+RUN apt-get install -y --no-install-recommends python3-pip python3-dev python3-setuptools
 RUN pip3 install --upgrade \
 scipy \
 jupyterlab \
