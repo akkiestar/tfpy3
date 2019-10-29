@@ -23,7 +23,8 @@ pydot \
 joblib \
 matplotlib \
 seaborn \
-tensorflow-gpu
+tensorflow-gpu \
+docopt
 
 
 RUN apt-get -y install vim \
