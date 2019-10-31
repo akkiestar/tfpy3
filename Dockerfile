@@ -23,7 +23,7 @@ pydot \
 joblib \
 matplotlib \
 seaborn \
-tensorflow-gpu \
+tensorflow-gpu=1.15 \
 docopt
 
 
